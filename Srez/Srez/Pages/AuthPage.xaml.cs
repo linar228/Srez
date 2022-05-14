@@ -33,7 +33,7 @@ namespace Srez.Pages
                     if (user.Login == LoginEntry.Text && user.Password == PasswordEntry.Text)
                     {
                         App.userID = user.Id;
-                        await Navigation.PushAsync(new ProjectListPage());
+                        await Navigation.PushAsync(new ProjectListPage(user));
                         haveUser = true;
                     }
                 }

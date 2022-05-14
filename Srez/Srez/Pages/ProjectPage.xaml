@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Srez.Pages.ProjectPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+                <Frame BorderColor="Bisque" Margin="30,10">
+                    <Entry x:Name="EName" Text="{Binding Name}" Placeholder="Название проекта" Margin="-15,-15"/>
+                </Frame>
+
+                <Frame BorderColor="Black" Margin="30,10">
+                    <Editor HeightRequest="150"
+                            Placeholder="Описание"
+                            x:Name="EDDescription" 
+                            Text="{Binding Description}"
+                            Margin="-15, -15"/>
+                </Frame>
+
+                <DatePicker x:Name="DPDate"
+                            Margin="30, 30"
+                            Date="{Binding Date}"/>
+
+                <Button Text="Добавить" 
+                        CornerRadius="50" 
+                        BackgroundColor="Bisque" 
+                        TextColor="White" 
+                        Margin="30, 10"
+                        x:Name="BtnAddProject" 
+                        Clicked="BtnAddProject_Clicked"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Редактировать" 
+                            CornerRadius="50" 
+                            BackgroundColor="Bisque" 
+                            TextColor="White" 
+                            x:Name="BtnEdit" 
+                            Clicked="BtnEdit_Clicked"/>
+                    
+                    <Button Text="Удалить" 
+                            CornerRadius="50"
+                            BackgroundColor="Bisque" 
+                            TextColor="White" 
+                            x:Name="BtnDeleteProject" 
+                            Clicked="BtnDeleteProject_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
